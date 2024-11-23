@@ -24,10 +24,9 @@ doctest = false
 test = false
 
 [dependencies]
-defmt = {version = "0.3.8"}
+defmt = {version = "0.3.8", optional = true}
 rustBoot = {path = "../../rustBoot", default-features = true, features = ["mcu"]}
 rustBoot-hal = {path = "../hal"}
-defmt-rtt = "0.4.1"
 
 [features]
 default = []

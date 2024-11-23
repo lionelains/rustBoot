@@ -288,7 +288,6 @@ where
         } else if let ImageType::UpdateInUpdatingState(_v) = updt {
             if self.rustboot_update(false).is_err() {
                 /* If update cannot be performed, launch former boot partition by default */
-                defmt::error!("Starting update to new fw failed. Booting former fw");
             }
         } else {
             match boot {

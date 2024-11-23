@@ -75,7 +75,7 @@ fn panic(info: &PanicInfo) -> ! {
         location,
         line,
         column,
-        info.message(),
+        info.message().unwrap_or(&format_args!("")),
     );
 
     cpu_core::wait_forever()
